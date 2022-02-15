@@ -1,0 +1,21 @@
+description: A package based on the directories crate from Rust, made for Dart.
+
+dependencies:
+  path: ^1.8.1
+
+dev_dependencies:
+  lints: ^1.0.0
+
+environment:
+  sdk: '>=2.16.1 <3.0.0'
+
+name: triangle
+
+platforms:
+  linux:
+  macos:
+  windows:
+
+publish_to: none
+
+version: 1.0.0

@@ -1,0 +1,17 @@
+description: An example library for Triangle.
+
+dependencies:
+  triangle:
+    path: ../../
+
+dev_dependencies:
+  lints: ^1.0.0
+
+environment:
+  sdk: '>=2.16.1 <3.0.0'
+
+name: directories
+
+publish_to: none
+
+version: 1.0.0
