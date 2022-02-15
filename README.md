@@ -8,16 +8,9 @@ Using Triangle is simple, include the following lines in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  triangle: ^1.0.0
-```
-
-```yaml
-dependencies:
   triangle:
     git: https://github.com/hammerhai/triangle.git
 ```
-
-Either of these two formats will work, one may be more unstable than the other.
 
 ## Usage
 
