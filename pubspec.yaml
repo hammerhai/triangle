@@ -16,6 +16,6 @@ platforms:
   macos:
   windows:
 
-publish_to: none
+repository: https://github.com/hammerhai/triangle
 
 version: 1.0.0
