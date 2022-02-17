@@ -18,14 +18,12 @@ class Environment {
     return null;
   }
 
-  /// Checks if an existing home directory can be located.
+  /// Checks if the located home directory exists.
   static bool hasHome({home}) {
-    // Should provide a slight unnoticeable increase in performance as the
-    // home directory isn't being searched for if it's already been
-    // located
     if (home != null) {
       return Directory(home).existsSync();
     }
+
     return getHome() != null;
   }
 }

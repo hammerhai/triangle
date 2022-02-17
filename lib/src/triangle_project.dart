@@ -13,6 +13,7 @@ class TriangleProject {
 
   String name;
 
+  /// Creates a new instance for locating project directories.
   TriangleProject(this.name) {
     String os = Platform.operatingSystem;
     switch (os) {
