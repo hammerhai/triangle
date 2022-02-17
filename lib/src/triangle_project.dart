@@ -28,40 +28,30 @@ class TriangleProject {
     }
   }
 
-  /// Finds the configuration directory, returning
-  /// "C:\Users\current\AppData\Roaming\directories-example\config" as a
-  /// [Directory] object for example.
+  /// Finds the configuration directory.
   Directory? findConfigurationDirectory({createIfNotExists = false}) {
     return _configurationDirectory?.findConfiguration(
         createIfNotExists: createIfNotExists);
   }
 
-  /// Finds the data directory, returning
-  /// "C:\Users\current\AppData\Local\directories-example\data" as a
-  /// [Directory] object for example.
+  /// Finds the local data directory.
   Directory? findLocalDataDirectory({createIfNotExists = false}) {
     return _dataDirectory?.findLocalData(createIfNotExists: createIfNotExists);
   }
 
-  /// Finds the preference directory, returning
-  /// "C:\Users\current\AppData\Roaming\directories-example\config" as a
-  /// [Directory] object for example.
+  /// Finds the preference directory.
   Directory? findPreferenceDirectory({createIfNotExists = false}) {
     return _configurationDirectory?.findPreference(
         createIfNotExists: createIfNotExists);
   }
 
-  /// Finds the data directory, returning
-  /// "C:\Users\current\AppData\Roaming\directories-example\data" as a
-  /// [Directory] object for example.
+  /// Finds the roaming data directory.
   Directory? findRoamingDataDirectory({createIfNotExists = false}) {
     return _dataDirectory?.findRoamingData(
         createIfNotExists: createIfNotExists);
   }
 
-  /// Finds the local cache directory, returning
-  /// "C:\Users\current\AppData\Local\directories-example" as a [Directory]
-  /// object for example.
+  /// Finds the local cache directory.
   Directory? findLocalCacheDirectory({createIfNotExists = false}) {
     return _cacheDirectory?.findLocal(createIfNotExists: createIfNotExists);
   }

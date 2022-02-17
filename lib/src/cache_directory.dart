@@ -9,9 +9,7 @@ class CacheDirectory {
 
   CacheDirectory(this._home, this._project);
 
-  /// Finds the local cache directory, returning
-  /// "C:\Users\current\AppData\Local\directories-example\cache" as a
-  /// [Directory] object for example.
+  /// Finds the local cache directory.
   Directory findLocal({createIfNotExists = false}) {
     late Directory directory;
 

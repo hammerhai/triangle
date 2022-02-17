@@ -9,9 +9,7 @@ class ConfigurationDirectory {
 
   ConfigurationDirectory(this._home, this._project);
 
-  /// Finds the configuration directory, returning
-  /// "C:\Users\current\AppData\Roaming\directories-example\config" as a
-  /// [Directory] object for example.
+  /// Finds the configuration directory.
   Directory findConfiguration({createIfNotExists = false}) {
     late Directory directory;
 
@@ -32,9 +30,7 @@ class ConfigurationDirectory {
     return directory;
   }
 
-  /// Finds the preference directory, returning
-  /// "C:\Users\current\AppData\Roaming\directories-example\config" as a
-  /// [Directory] object for example.
+  /// Finds the preference directory.
   Directory findPreference({createIfNotExists = false}) {
     late Directory directory =
         findConfiguration(createIfNotExists: createIfNotExists);

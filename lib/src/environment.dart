@@ -1,8 +1,7 @@
 import 'dart:io';
 
 class Environment {
-  /// Finds the home directory, returning "C:\Users\current" as a [Directory]
-  /// object for example.
+  /// Finds the home directory.
   static String? getHome() {
     Directory? home;
 
@@ -19,7 +18,7 @@ class Environment {
     return null;
   }
 
-  /// Checks if an existing home directory can be located
+  /// Checks if an existing home directory can be located.
   static bool hasHome({home}) {
     // Should provide a slight unnoticeable increase in performance as the
     // home directory isn't being searched for if it's already been

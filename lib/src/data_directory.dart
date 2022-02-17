@@ -9,9 +9,7 @@ class DataDirectory {
 
   DataDirectory(this._home, this._project);
 
-  /// Finds the data directory, returning
-  /// "C:\Users\current\AppData\Local\directories-example\data" as a
-  /// [Directory] object for example.
+  /// Finds the local data directory.
   Directory findLocalData({createIfNotExists = false}) {
     late Directory directory;
 
@@ -32,9 +30,7 @@ class DataDirectory {
     return directory;
   }
 
-  /// Finds the data directory, returning
-  /// "C:\Users\current\AppData\Roaming\directories-example\data" as a
-  /// [Directory] object for example.
+  /// Finds the roaming data directory.
   Directory findRoamingData({createIfNotExists = false}) {
     var directory = findLocalData();
 
