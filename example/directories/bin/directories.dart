@@ -2,9 +2,16 @@ import 'package:triangle/triangle.dart';
 
 void main() {
   TriangleProject project = TriangleProject("directories-example");
-  print("Configuration: " + project.findConfigurationDirectory()!.path);
-  print("Local cache: " + project.findLocalCacheDirectory()!.path);
-  print("Local data: " + project.findLocalDataDirectory()!.path);
-  print("Preference: " + project.findPreferenceDirectory()!.path);
-  print("Roaming data: " + project.findRoamingDataDirectory()!.path);
+
+  String? _configuration = project.findConfigurationDirectory()?.path ?? "";
+  String? _localCache = project.findLocalCacheDirectory()?.path ?? "";
+  String? _localData = project.findLocalDataDirectory()?.path ?? "";
+  String? _preference = project.findPreferenceDirectory()?.path ?? "";
+  String? _roamingData = project.findRoamingDataDirectory()?.path ?? "";
+
+  print("Configuration: $_configuration");
+  print("Local cache: $_localCache");
+  print("Local data: $_localData");
+  print("Preference: $_preference");
+  print("Roaming data: $_roamingData");
 }

@@ -12,8 +12,8 @@ class ConfigurationDirectory {
   /// Finds the configuration directory, returning
   /// "C:\Users\current\AppData\Roaming\directories-example\config" as a
   /// [Directory] object for example.
-  Directory? findConfiguration({createIfNotExists = false}) {
-    late Directory? directory;
+  Directory findConfiguration({createIfNotExists = false}) {
+    late Directory directory;
 
     if (Platform.isLinux) {
       directory = Directory(p.join(_home, ".config", _project.name));
@@ -26,7 +26,7 @@ class ConfigurationDirectory {
     }
 
     if (createIfNotExists) {
-      directory?.createSync(recursive: true);
+      directory.createSync(recursive: true);
     }
 
     return directory;
@@ -35,8 +35,8 @@ class ConfigurationDirectory {
   /// Finds the preference directory, returning
   /// "C:\Users\current\AppData\Roaming\directories-example\config" as a
   /// [Directory] object for example.
-  Directory? findPreference({createIfNotExists = false}) {
-    late Directory? directory =
+  Directory findPreference({createIfNotExists = false}) {
+    late Directory directory =
         findConfiguration(createIfNotExists: createIfNotExists);
 
     if (Platform.isMacOS) {
@@ -45,7 +45,7 @@ class ConfigurationDirectory {
     }
 
     if (createIfNotExists) {
-      directory?.createSync(recursive: true);
+      directory.createSync(recursive: true);
     }
 
     return directory;

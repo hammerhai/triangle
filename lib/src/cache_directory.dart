@@ -12,8 +12,8 @@ class CacheDirectory {
   /// Finds the local cache directory, returning
   /// "C:\Users\current\AppData\Local\directories-example\cache" as a
   /// [Directory] object for example.
-  Directory? findLocal({createIfNotExists = false}) {
-    late Directory? directory;
+  Directory findLocal({createIfNotExists = false}) {
+    late Directory directory;
 
     if (Platform.isLinux) {
       directory = Directory(p.join(_home, ".cache", _project.name));
@@ -25,7 +25,7 @@ class CacheDirectory {
     }
 
     if (createIfNotExists) {
-      directory?.createSync(recursive: true);
+      directory.createSync(recursive: true);
     }
 
     return directory;

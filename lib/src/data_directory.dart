@@ -12,8 +12,8 @@ class DataDirectory {
   /// Finds the data directory, returning
   /// "C:\Users\current\AppData\Local\directories-example\data" as a
   /// [Directory] object for example.
-  Directory? findLocalData({createIfNotExists = false}) {
-    late Directory? directory;
+  Directory findLocalData({createIfNotExists = false}) {
+    late Directory directory;
 
     if (Platform.isLinux) {
       directory = Directory(p.join(_home, ".local", "share", _project.name));
@@ -26,7 +26,7 @@ class DataDirectory {
     }
 
     if (createIfNotExists) {
-      directory?.createSync(recursive: true);
+      directory.createSync(recursive: true);
     }
 
     return directory;
@@ -35,7 +35,7 @@ class DataDirectory {
   /// Finds the data directory, returning
   /// "C:\Users\current\AppData\Roaming\directories-example\data" as a
   /// [Directory] object for example.
-  Directory? findRoamingData({createIfNotExists = false}) {
+  Directory findRoamingData({createIfNotExists = false}) {
     var directory = findLocalData();
 
     if (Platform.isWindows) {
@@ -44,7 +44,7 @@ class DataDirectory {
     }
 
     if (createIfNotExists) {
-      directory?.createSync(recursive: true);
+      directory.createSync(recursive: true);
     }
 
     return directory;
