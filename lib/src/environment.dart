@@ -2,7 +2,7 @@ import 'dart:io';
 
 class Environment {
   /// Finds the home directory.
-  static String? getHome() {
+  static Directory? getHome() {
     Directory? home;
 
     if (Platform.isLinux || Platform.isMacOS) {
@@ -12,7 +12,7 @@ class Environment {
     }
 
     if (home?.existsSync() ?? false) {
-      return home!.path;
+      return home;
     }
 
     return null;

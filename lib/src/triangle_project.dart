@@ -9,7 +9,7 @@ class TriangleProject {
   CacheDirectory? _cacheDirectory;
   ConfigurationDirectory? _configurationDirectory;
   DataDirectory? _dataDirectory;
-  final String? _home = Environment.getHome();
+  String? _home;
 
   String name;
 
@@ -20,6 +20,7 @@ class TriangleProject {
       case 'linux':
       case 'macos':
       case 'windows':
+        _home = Environment.getHome()?.path;
         if (Environment.hasHome(home: _home)) {
           _cacheDirectory = CacheDirectory(_home!, this);
           _configurationDirectory = ConfigurationDirectory(_home!, this);
