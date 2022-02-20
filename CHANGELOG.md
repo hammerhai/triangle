@@ -13,7 +13,7 @@
 
 ### Removed
 
-- ⚰️ Erased unneccessary variable null safety
+- ⚰️ Erased unnecessary variable null safety
 - 🔥 Removed `README.md` from `/example`
 
 ## 1.0.0
