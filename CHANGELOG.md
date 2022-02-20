@@ -8,13 +8,11 @@
 
 ### Changed
 
-- 🎨 Edited `/example/directories/bin/directories.dart`
 - ⚡️ Polished internal functions
 
 ### Removed
 
 - ⚰️ Erased unnecessary variable null safety
-- 🔥 Removed `README.md` from `/example`
 
 ## 1.0.0
 
