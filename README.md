@@ -14,6 +14,14 @@ dependencies:
     git: https://github.com/hammerhai/triangle.git
 ```
 
+## Testing
+
+From the root directory, test Triangle with:
+
+```bash
+dart test test/directories/main.dart
+```
+
 ## Usage
 
 For specific use cases, take a look in the `/example` folder.
