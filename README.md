@@ -1,5 +1,7 @@
 # Triangle
 
+![Banner](./assets/banner.png)
+
 A package based on the [🦀 directories crate](https://crates.io/crates/directories) from Rust, made for 🎯 Dart with a few modifications.
 
 ## Getting started

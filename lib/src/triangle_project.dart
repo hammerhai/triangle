@@ -1,5 +1,6 @@
-import 'dart:io';
+import 'dart:io' show Directory, FileSystemEntity, Platform;
 
+import 'package:path/path.dart' as p;
 import 'package:triangle/src/cache_directory.dart';
 import 'package:triangle/src/configuration_directory.dart';
 import 'package:triangle/src/data_directory.dart';
@@ -10,7 +11,6 @@ class TriangleProject {
   ConfigurationDirectory? _configurationDirectory;
   DataDirectory? _dataDirectory;
   String? _home;
-
   String name;
 
   /// Creates a new instance for locating project directories.
@@ -56,5 +56,14 @@ class TriangleProject {
   /// Finds the local cache directory.
   Directory? findLocalCacheDirectory({createIfNotExists = false}) {
     return _cacheDirectory?.findLocal(createIfNotExists: createIfNotExists);
+  }
+
+  /// Shift the files of one directory to another.
+  Future shiftDirectory(String from, String to) {
+    var fromDirectory = Directory(from);
+    List<FileSystemEntity> entities = fromDirectory.listSync(recursive: true);
+    return Future.forEach(entities, (FileSystemEntity entity) {
+      entity.rename(p.join(p.normalize(to), p.basename(entity.path)));
+    });
   }
 }

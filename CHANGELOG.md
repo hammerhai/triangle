@@ -1,11 +1,15 @@
 # Changelog
 
-## 1.0.1
+## 1.1.0
+
+### Added
+
+- ✨ Move files from one directory to another with `shiftDirectory`
 
 ### Changed
 
-- 🎨 Edited `/example/directories/bin/directories.dart` to include improved null safety and separated variables
-- ⚡️ Optimized performance minimally for internal functions
+- 🎨 Edited `/example/directories/bin/directories.dart`
+- ⚡️ Polished internal functions
 
 ### Removed
 
