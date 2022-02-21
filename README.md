@@ -16,10 +16,10 @@ dependencies:
 
 ## Testing
 
-From the root directory, test Triangle with:
+Test Triangle with:
 
 ```bash
-dart test test/directories/main.dart
+dart test
 ```
 
 ## Usage

@@ -37,10 +37,10 @@ void main() {
     // Assumes you're working in the root directory of Triangle
     String currentDirectory = Directory.current.path;
     Directory fromDirectory =
-        Directory(p.join(currentDirectory, 'test', 'directories', 'unshifted'));
+        Directory(p.join(currentDirectory, 'test', 'unshifted'));
     File testFile = File(p.join(fromDirectory.path, 'shift.tri'));
     Directory toDirectory =
-        Directory(p.join(currentDirectory, 'test', 'directories', 'shifted'));
+        Directory(p.join(currentDirectory, 'test', 'shifted'));
     await testFile.create(recursive: true);
     await toDirectory.create(recursive: true);
     await project.shiftDirectory(fromDirectory.path, toDirectory.path);
