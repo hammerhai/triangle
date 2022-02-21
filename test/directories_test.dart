@@ -45,9 +45,5 @@ void main() {
     await toDirectory.create(recursive: true);
     await project.shiftDirectory(fromDirectory.path, toDirectory.path);
     expect(toDirectory.listSync().length, greaterThanOrEqualTo(1));
-    if (fromDirectory.existsSync() && toDirectory.existsSync()) {
-      await fromDirectory.delete(recursive: true);
-      await toDirectory.delete(recursive: true);
-    }
   });
 }
