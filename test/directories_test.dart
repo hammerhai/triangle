@@ -31,19 +31,4 @@ void main() {
     String? roamingData = project.findRoamingDataDirectory()?.path;
     expect(roamingData, contains(project.name));
   });
-
-  test('Project.shiftDirectory() moves file from one directory to another',
-      () async {
-    // Assumes you're working in the root directory of Triangle
-    String currentDirectory = Directory.current.path;
-    Directory fromDirectory =
-        Directory(p.join(currentDirectory, 'test', 'unshifted'));
-    File testFile = File(p.join(fromDirectory.path, 'shift.tri'));
-    Directory toDirectory =
-        Directory(p.join(currentDirectory, 'test', 'shifted'));
-    await testFile.create(recursive: true);
-    await toDirectory.create(recursive: true);
-    await project.shiftDirectory(fromDirectory.path, toDirectory.path);
-    expect(toDirectory.listSync().length, greaterThanOrEqualTo(1));
-  });
 }

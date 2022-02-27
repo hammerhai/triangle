@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0
+
+### Removed
+
+- 🗑️ To keep Triangle consistent with set goals, the `shiftDirectory` has been deprecated
+
 ## 1.1.0
 
 ### Added
