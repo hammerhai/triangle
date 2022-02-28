@@ -58,7 +58,8 @@ class TriangleProject {
     return _cacheDirectory?.findLocal(createIfNotExists: createIfNotExists);
   }
 
-  /// Shifting the files of one directory to another is deprecated as of v1.2.0.
+  /// Shift files from one directory to another.
+  @Deprecated("Expected to be removed in v2.0.0.")
   Future shiftDirectory(String from, String to) async {
     List<FileSystemEntity> entities =
         await Directory(from).list(recursive: true).toList();
