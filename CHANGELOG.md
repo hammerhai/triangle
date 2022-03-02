@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.0
+
+### Added
+
+- ✨ Exposed API to get the home directory
+
 ## 1.2.0
 
 ### Removed
