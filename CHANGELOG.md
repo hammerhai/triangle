@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.1
+
+### Fixed
+
+- 🛂 Allow the `Triangle` class to be accessed
+
 ## 1.3.0
 
 ### Added
