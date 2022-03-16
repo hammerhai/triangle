@@ -20,12 +20,10 @@ class TriangleProject {
       case 'linux':
       case 'macos':
       case 'windows':
-        _home = Environment.getHome()?.path;
-        if (Environment.hasHome(home: _home)) {
-          _cacheDirectory = CacheDirectory(_home!, this);
-          _configurationDirectory = ConfigurationDirectory(_home!, this);
-          _dataDirectory = DataDirectory(_home!, this);
-        }
+        _home = Environment.getHome().path;
+        _cacheDirectory = CacheDirectory(_home!, this);
+        _configurationDirectory = ConfigurationDirectory(_home!, this);
+        _dataDirectory = DataDirectory(_home!, this);
         break;
     }
   }
@@ -34,6 +32,11 @@ class TriangleProject {
   Directory? findConfigurationDirectory({createIfNotExists = false}) {
     return _configurationDirectory?.findConfiguration(
         createIfNotExists: createIfNotExists);
+  }
+
+  /// Finds the local cache directory.
+  Directory? findLocalCacheDirectory({createIfNotExists = false}) {
+    return _cacheDirectory?.findLocal(createIfNotExists: createIfNotExists);
   }
 
   /// Finds the local data directory.
@@ -51,11 +54,6 @@ class TriangleProject {
   Directory? findRoamingDataDirectory({createIfNotExists = false}) {
     return _dataDirectory?.findRoamingData(
         createIfNotExists: createIfNotExists);
-  }
-
-  /// Finds the local cache directory.
-  Directory? findLocalCacheDirectory({createIfNotExists = false}) {
-    return _cacheDirectory?.findLocal(createIfNotExists: createIfNotExists);
   }
 
   /// Shift files from one directory to another.

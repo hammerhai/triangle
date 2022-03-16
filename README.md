@@ -12,6 +12,8 @@ Using Triangle is simple, include the following lines in your `pubspec.yaml`:
 dependencies:
   triangle:
     git: https://github.com/hammerhai/triangle.git
+
+publish_to: none
 ```
 
 ## Testing
