@@ -55,16 +55,4 @@ class TriangleProject {
     return _dataDirectory?.findRoamingData(
         createIfNotExists: createIfNotExists);
   }
-
-  /// Shift files from one directory to another.
-  @Deprecated("Expected to be removed in v2.0.0.")
-  Future shiftDirectory(String from, String to) async {
-    List<FileSystemEntity> entities =
-        await Directory(from).list(recursive: true).toList();
-    return Future.forEach(entities, (FileSystemEntity entity) {
-      var filename = p.basename(entity.path);
-      var normalize = p.normalize(to);
-      entity.rename(p.join(normalize, filename));
-    });
-  }
 }

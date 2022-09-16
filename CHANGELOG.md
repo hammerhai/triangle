@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.0.0
+
+### Changed
+
+- 🍱 Updated [banner.png](https://github.com/hammerhai/triangle-dart/assets/banner.png) 
+- 📝 Updated documentation
+- ⬆️ Upgraded [Lints](https://pub.dev/packages/lints) to v2.0.0<sup>1</sup>
+
+<sup>1</sup> Included was a change to the Dart SDK constraint.
+
+### Removed
+
+- ⚰️ Previously deprecated method, `Triangle.shiftDirectory`, was removed
+
 ## 1.3.2
 
 ### Changed
