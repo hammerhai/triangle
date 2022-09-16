@@ -1,6 +1,5 @@
-import 'dart:io' show Directory, FileSystemEntity, Platform;
+import 'dart:io' show Directory, Platform;
 
-import 'package:path/path.dart' as p;
 import 'package:triangle/src/cache_directory.dart';
 import 'package:triangle/src/configuration_directory.dart';
 import 'package:triangle/src/data_directory.dart';

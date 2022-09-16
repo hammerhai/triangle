@@ -10,9 +10,14 @@
 
 <sup>1</sup> Included was a change to the Dart SDK constraint.
 
+### Fixed
+
+- ✅ Pass analyzation
+
 ### Removed
 
 - ⚰️ Previously deprecated method, `Triangle.shiftDirectory`, was removed
+- ⚰️ Removed unused imports
 
 ## 1.3.2
 
