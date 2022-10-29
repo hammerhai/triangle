@@ -17,6 +17,6 @@ platforms:
   macos:
   windows:
 
-repository: https://github.com/hammerhai/triangle-dart
+repository: https://github.com/hammerhai/triangle
 
 version: 2.0.0
