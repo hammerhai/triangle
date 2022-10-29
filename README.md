@@ -11,7 +11,7 @@ Using Triangle is simple, include the following lines in your `pubspec.yaml`:
 ```yaml
 dependencies:
   triangle:
-    git: https://github.com/hammerhai/triangle-dart.git
+    git: https://github.com/hammerhai/triangle.git
 
 publish_to: none
 ```
