@@ -2,30 +2,30 @@ import 'package:test/test.dart';
 import 'package:triangle/triangle.dart';
 
 void main() {
-  TriangleProject project = TriangleProject("directories-test");
+  TriangleProject project = TriangleProject('directories-test');
 
-  test('Project.findConfigurationDirectory() contains directories-test', () {
-    String? configuration = project.findConfigurationDirectory()?.path;
-    expect(configuration, contains(project.name));
+  test('Project.findConfigurationDirectory() is not empty or null', () {
+    String? configuration = project.findConfigurationDirectory()?.path ?? '';
+    expect(configuration, isNotEmpty);
   });
 
-  test('Project.findLocalCacheDirectory() contains directories-test', () {
-    String? localCache = project.findLocalCacheDirectory()?.path;
-    expect(localCache, contains(project.name));
+  test('Project.findLocalCacheDirectory() is not empty or null', () {
+    String? localCache = project.findLocalCacheDirectory()?.path ?? '';
+    expect(localCache, isNotEmpty);
   });
 
-  test('Project.findLocalDataDirectory() contains directories-test', () {
-    String? localData = project.findLocalDataDirectory()?.path;
-    expect(localData, contains(project.name));
+  test('Project.findLocalDataDirectory() is not empty or null', () {
+    String? localData = project.findLocalDataDirectory()?.path ?? '';
+    expect(localData, isNotEmpty);
   });
 
-  test('Project.findPreferenceDirectory() contains directories-test', () {
-    String? preference = project.findPreferenceDirectory()?.path;
-    expect(preference, contains(project.name));
+  test('Project.findPreferenceDirectory() is not empty or null', () {
+    String? preference = project.findPreferenceDirectory()?.path ?? '';
+    expect(preference, isNotEmpty);
   });
 
-  test('Project.findRoamingDataDirectory() contains directories-test', () {
-    String? roamingData = project.findRoamingDataDirectory()?.path;
-    expect(roamingData, contains(project.name));
+  test('Project.findRoamingDataDirectory() is not empty or null', () {
+    String? roamingData = project.findRoamingDataDirectory()?.path ?? '';
+    expect(roamingData, isNotEmpty);
   });
 }
